@@ -1,103 +1,48 @@
 import aiml
-
 from rag import search_knowledge
 
-
-# =========================
-# AIML
-# =========================
-
+# Membuat AIML Kernel
 kernel = aiml.Kernel()
 
-kernel.learn(
-    "chatbot.aiml"
-)
+# Membaca file AIML
+kernel.learn("chatbot.aiml")
 
 
-# =========================
-# CHATBOT
-# =========================
+def get_response(user_input):
+    """
+    Memproses pertanyaan menggunakan AIML terlebih dahulu.
+    Jika tidak ditemukan, dilanjutkan ke RAG.
+    """
 
-print("=" * 50)
-print("              ARCHMATE AI")
-print("       Architecture Assistant")
-print("=" * 50)
+    # ==========================
+    # 1. CEK AIML
+    # ==========================
 
-print("Ketik 'keluar' untuk berhenti.\n")
-
-
-while True:
-
-    user_input = input("You: ")
-
-
-    if user_input.lower() == "keluar":
-
-        print(
-            "ArchMate: Sampai jumpa! 👋"
-        )
-
-        break
-
-
-    # =========================
-    # AIML
-    # =========================
-
-    response = kernel.respond(
-        user_input
-    )
-
+    response = kernel.respond(user_input)
 
     if response:
+        return {
+            "response": response,
+            "source": "AIML"
+        }
 
-        print(
-            "\nArchMate:",
-            response
-        )
+    # ==========================
+    # 2. CEK RAG
+    # ==========================
 
-        print(
-            "Source: AIML\n"
-        )
-
-        continue
-
-
-    # =========================
-    # RAG
-    # =========================
-
-    result = search_knowledge(
-        user_input
-    )
-
+    result = search_knowledge(user_input)
 
     if result:
+        return {
+            "response": result,
+            "source": "RAG"
+        }
 
-        print(
-            "\nArchMate:"
-        )
+    # ==========================
+    # 3. TIDAK DITEMUKAN
+    # ==========================
 
-        print(
-            result
-        )
-
-        print(
-            "\nSource: RAG\n"
-        )
-
-
-    else:
-
-        print(
-            "\nArchMate:"
-        )
-
-        print(
-            "Maaf, saya belum menemukan "
-            "informasi yang relevan."
-        )
-
-        print(
-            "Source: Not Found\n"
-        )
+    return {
+        "response": "Maaf, saya belum menemukan informasi yang relevan dengan pertanyaan tersebut. 🍒",
+        "source": "Not Found"
+    }

@@ -9,7 +9,7 @@ const newChat = document.getElementById("newChat");
 // SEND MESSAGE
 // ==========================================
 
-function sendMessage() {
+async function sendMessage() {
 
     const text = input.value.trim();
 
@@ -17,127 +17,75 @@ function sendMessage() {
         return;
     }
 
-
     // Sembunyikan welcome
     welcome.style.display = "none";
 
-
-    // Tambahkan pesan user
-    addMessage(
-        text,
-        "user"
-    );
-
+    // Tampilkan pesan user
+    addMessage(text, "user");
 
     // Bersihkan input
     input.value = "";
 
+    // Tampilkan loading
+    const loadingMessage = addMessage(
+        "CherryChatbot sedang berpikir... 🍒",
+        "ai"
+    );
 
-    // Simulasi AI
-    setTimeout(() => {
 
-        const response =
-            generateResponse(text);
+    try {
 
+        // Kirim pertanyaan ke Python
+        const response = await fetch("/chat", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                message: text
+            })
+
+        });
+
+
+        if (!response.ok) {
+            throw new Error("Server error");
+        }
+
+
+        // Ambil jawaban Python
+        const data = await response.json();
+
+
+        // Hapus loading
+        loadingMessage.remove();
+
+
+        // Tampilkan jawaban
         addMessage(
-            response.text,
+            data.response,
             "ai",
-            response.source
+            data.source
         );
 
-    }, 600);
+
+    } catch (error) {
+
+        console.error(error);
+
+        loadingMessage.remove();
+
+        addMessage(
+            "Maaf, CherryChatbot tidak dapat terhubung ke Python. Pastikan server sedang berjalan. 🍒",
+            "ai",
+            "System"
+        );
+
+    }
 }
-
-
-
-// ==========================================
-// SIMPLE RESPONSE
-// ==========================================
-
-function generateResponse(text) {
-
-    const question =
-        text.toLowerCase();
-
-
-    if (
-        question.includes("modern")
-    ) {
-
-        return {
-
-            text:
-                "Arsitektur modern merupakan gaya arsitektur yang menekankan fungsi, kesederhanaan bentuk, penggunaan material modern seperti kaca, baja, dan beton, serta minimnya ornamen.",
-
-            source: "AIML / RAG"
-
-        };
-
-    }
-
-
-    if (
-        question.includes("brutalist") ||
-        question.includes("brutalism")
-    ) {
-
-        return {
-
-            text:
-                "Arsitektur Brutalist dikenal dengan penggunaan beton ekspos, bentuk geometris yang kuat, struktur yang terlihat jelas, dan minim ornamen.",
-
-            source: "AIML / RAG"
-
-        };
-
-    }
-
-
-    if (
-        question.includes("tropical") ||
-        question.includes("tropis")
-    ) {
-
-        return {
-
-            text:
-                "Arsitektur tropis dirancang untuk menyesuaikan bangunan dengan iklim tropis. Prinsipnya meliputi ventilasi alami, perlindungan terhadap sinar matahari, bukaan yang tepat, dan overhang.",
-
-            source: "AIML / RAG"
-
-        };
-
-    }
-
-
-    if (
-        question.includes("halo") ||
-        question.includes("hai")
-    ) {
-
-        return {
-
-            text:
-                "Halo! 🍒 Saya CherryChatbot. Saya siap membantu kamu menjelajahi dunia arsitektur. Apa yang ingin kamu pelajari?",
-
-            source: "AIML"
-
-        };
-
-    }
-
-
-    return {
-
-        text:
-            "Pertanyaan yang menarik! 🍒 Saat ini saya sedang mencari informasi arsitektur yang paling relevan untuk pertanyaan kamu.",
-
-        source: "RAG"
-
-    };
-
-}
-
 
 
 // ==========================================
@@ -153,7 +101,6 @@ function addMessage(
     const message =
         document.createElement("div");
 
-
     message.classList.add(
         "message",
         sender
@@ -163,7 +110,6 @@ function addMessage(
     const content =
         document.createElement("div");
 
-
     content.classList.add(
         "message-content"
     );
@@ -172,20 +118,18 @@ function addMessage(
     content.textContent = text;
 
 
+    // Source AIML / RAG
     if (source) {
 
         const sourceElement =
             document.createElement("div");
 
-
         sourceElement.classList.add(
             "source"
         );
 
-
         sourceElement.textContent =
             "● Source: " + source;
-
 
         content.appendChild(
             sourceElement
@@ -194,28 +138,24 @@ function addMessage(
     }
 
 
-    message.appendChild(
-        content
-    );
+    message.appendChild(content);
+
+    messages.appendChild(message);
 
 
-    messages.appendChild(
-        message
-    );
-
-
-    // Scroll ke pesan terbaru
-
+    // Scroll
     setTimeout(() => {
 
-        messages.scrollIntoView({
+        message.scrollIntoView({
             behavior: "smooth",
             block: "end"
         });
 
     }, 50);
-}
 
+
+    return message;
+}
 
 
 // ==========================================
@@ -228,9 +168,8 @@ sendButton.addEventListener(
 );
 
 
-
 // ==========================================
-// ENTER TO SEND
+// ENTER
 // ==========================================
 
 input.addEventListener(
@@ -252,7 +191,6 @@ input.addEventListener(
 );
 
 
-
 // ==========================================
 // QUICK QUESTIONS
 // ==========================================
@@ -263,31 +201,25 @@ const quickCards =
     );
 
 
-quickCards.forEach(
-    function(card) {
+quickCards.forEach(function(card) {
 
-        card.addEventListener(
-            "click",
-            function() {
+    card.addEventListener(
+        "click",
+        function() {
 
-                const question =
-                    card.querySelector(
-                        "strong"
-                    ).textContent;
+            const question =
+                card.querySelector(
+                    "strong"
+                ).textContent;
 
+            input.value = question;
 
-                input.value =
-                    question;
+            input.focus();
 
+        }
+    );
 
-                input.focus();
-
-            }
-        );
-
-    }
-);
-
+});
 
 
 // ==========================================
