@@ -1,51 +1,182 @@
-ARSITEKTUR MODERN
-
 Arsitektur modern merupakan gaya arsitektur yang menekankan fungsi,
 kesederhanaan bentuk, penggunaan material modern, dan minimnya ornamen.
-
 Ciri arsitektur modern meliputi bentuk geometris sederhana, penggunaan
 kaca, baja, dan beton, serta konsep open plan.
 
 
-ARSITEKTUR BRUTALIST
-
 Arsitektur Brutalist merupakan gaya arsitektur yang berkembang pada
 pertengahan abad ke-20.
-
 Ciri utama Brutalism adalah beton ekspos, bentuk geometris yang kuat,
 struktur bangunan yang terlihat jelas, dan minim ornamen.
 
 
-ARSITEKTUR GOTIK
-
 Arsitektur Gothic berkembang di Eropa pada abad pertengahan.
-
 Ciri arsitektur Gothic meliputi pointed arch, ribbed vault,
 flying buttress, dan penggunaan kaca patri.
 
 
-ARSITEKTUR TROPIS
-
 Arsitektur tropis dirancang untuk menyesuaikan bangunan dengan
 kondisi iklim tropis.
-
 Prinsipnya meliputi ventilasi alami, perlindungan terhadap sinar
 matahari, bukaan yang tepat, dan penggunaan overhang.
 
 
-MATERIAL BETON
-
-Beton merupakan material konstruksi yang banyak digunakan dalam
-arsitektur.
-
-Beton memiliki kekuatan tekan yang tinggi dan dapat digunakan
-untuk berbagai jenis struktur bangunan.
-
-
-MATERIAL KAYU
 
 Kayu merupakan material yang memberikan karakter alami dan kesan
 hangat pada bangunan.
-
 Kayu dapat digunakan sebagai struktur, lantai, dinding, plafon,
 dan elemen dekoratif.
+
+lnventarisasi adalah kegiatan mengumpulkan data terkait tapak (data kondisi
+eksisting/kondisi saat ini) yang akan direncanakan/didesain. Data data tersebut
+dapat diperoleh secara langsung (data primer) atau tidak langsung (data sekunder).
+
+
+Jenis-jenis data yang dikumpulkan dari Inventarisasi
+a. Batas Tapak
+b. Biofisik & Sosial Budaya
+c. Tautan Lingkungan
+d. Sirkulasi
+e. Aksesibilitas
+e. Aksesibilitas
+f. Hidrologi
+g. Topografi
+h. Landuse/landcover
+i. Visual
+j. Hazard & Kebisingan
+k. Utilitas
+
+Analisis tapak Pada tahap ini dilakukan proses analisis terhadap data-data yang sudah
+dikumpulkan atau diperoleh pada tahap inventarisasi dan identifikasi. Setiap aspek
+data dianalisis secara deskriptif, kualitatif, maupun kuantitatif.
+
+
+
+Analisis bangunan Lanskap & Analisis vegetasi Tahap ini merupakan bagian dari analisis tapak namun khusus menganalisis elemen bangunan
+lanskap dan vegetasi eksisting yang terdapat di dalam tapak. Setiap bangunan lanskap dianalisis
+secara deskriptif sesuai fungsi peruntukannya apakah masih sesuai untuk perencanaan atau
+sudah tidak sesuai. Demikian juga dengan vegetasi eksisting dianalisis sesuai dengan jenis, fungsi,
+maupun penataannya apakah sudah sesuai atau belum.
+
+
+
+Analisis fungsi menjabarkan konsep aktivitas yang akan diadakan dalam perencanaan kemudian 
+menentukanfasilitas apa saja yang dibutuhkan untuk menunjang bentuk aktivitas tersebut.
+
+
+Konsep ruang digambar secara spasial berdasarkan pembagian ruang (rencana zonasi) dan
+hubungan antar ruang dari hasil analisis fungsi. Konsep ruang akan menjadi dasar dalam
+menyusun siteplan. Konsep sirkulasi digambar secara spasial berdasarkan hasil dari analisis
+sirkulasi dalam tapak. Pola atau tipe sirkulasi yang terpilih selanjutnya dikembangkan dalam
+siteplan.
+
+
+Konsep vegetasi digambar secara spasial sebagai hasil dari analisis vegetasi dengan
+menunjukkan fungsi-fungsi vegetasi yang akan digunakan dalam siteplan. Misalkan fungsi
+pengarah, display, peneduh, focal point, latar (screen), penyangga (buffer), pembatas (border),
+dan sebagainya. Konsep ruang- konsep sirkulasi- konsep vegetasi kemudian di overlay
+menjadi satu gambar spasial yang disebut block plan. Block plan merupakan output dari proses
+perencanaan lanskap.
+
+
+Siteplan adalah gambar denah (tampak atas) dalam bentuk 2 dimensi sebagai hasil dari
+pengembangan program ruang dan konsep desain/bentuk. Siteplan adalah bagian dari gambar
+kerja yang merupakan output dari proses perancangan sebagai tindak lanjut dari tahap
+perencanaan lanskap.
+
+Site adalah suatu wilayah/ bentang tempat suatu fasilitas/fungsi/bangunan akan dibangun.
+
+
+Site Planning adalah proses perencanaan tapak/site untuk mengelolah tapak/bentang dan fasilitas/bangunan yang saling berkesesuaian.
+
+
+Site condition adalah kondisi tapak baik aspek positif (kelebihan) maupun aspek negatifnya(kekurangan).
+
+
+Lokasi Dapat mencakup peta negara bagian dan peta kota yang 
+menunjukkan lokasi tapak dalam kaitannya dengan kota secara 
+keseluruhan. Peta kota juga dapat menunjukkan jarak dan waktu 
+tempuh ke fungsi-fungsi terkait di bagian lain kota.
+
+
+
+Fitur Fisik Alamiah mencakup kontur, pola drainase, jenis tanah dan daya 
+dukungnya, pohon, batu, punggungan, puncak, lembah, kolam, dan genangan air.
+
+
+
+Fitur Buatan mendokumentasikan kondisi di lokasi seperti bangunan, dinding, 
+jalan masuk, akses trotoar, hidran, tiang listrik, dan pola perkerasan. Fitur di luar 
+lokasi dapat mencakup karakteristik pengembangan sekitar seperti skala, bentuk 
+atap, pola bukaan, batas sempadan, material, warna, ruang terbuka, sumbu 
+visual, pola perkerasan, material dan pola lanskap, tingkat keterbukaan dan 
+dominasi bentuk dinding, serta aksesori dan detail lainnya.
+
+
+
+Sensory mendokumentasikan aspek visual, auditori, taktil, dan olfaktori 
+dari tapak. Masalah umum meliputi pemandangan ke dan dari tapak serta 
+kebisingan yang dihasilkan di sekitar tapak. Penting untuk mencatat jenis, 
+durasi, intensitas, dan kualitas (positif atau negatif) dari masalah sensorik.
+
+
+
+Climate menyajikan semua kondisi iklim yang relevan seperti curah hujan, 
+salju, kelembaban, dan variasi suhu sepanjang bulan dalam setahun. Juga 
+termasuk arah angin utama, lintasan matahari, serta sudut matahari vertikal 
+yang berubah sepanjang tahun, serta potensi bencana alam seperti tornado, 
+badai, dan gempa bumi. 
+
+
+HVAC system (heating, ventilating, and air conditioning), merupakan sistem yang mencakup 
+pemanas, ventilasi, dan pendingin dalam satu kesatuan. Tujuan 
+utama dari sistem HVAC adalah menciptakan lingkungan yang 
+nyaman bagi penghuni bangunan dengan mengatur berbagai 
+variabel udara dalam ruangan, seperti temperature, humidity, 
+air velocity, dan cleanliness, serta mendistribusikannya secara 
+merata ke seluruh bangunan (Hurry, 1999).
+
+
+Fire fighting dapat didefinisikan sebagai sistem perlindungan bangunan terhadap ancaman kebakaran dengan memanfaatkan berbagai jenis media. Dalam implementasinya, 
+beberapa sistem proteksi kebakaran yang umum digunakan 
+meliputi fire hydrant, fire sprinkler, dan fire alarm system.
+
+
+Sewage Treatment Plant (STP) adalah sistem yang digunakan 
+untuk mengelola air limbah pada berbagai jenis bangunan, 
+seperti hotel, apartemen, condotel, rumah sakit, dan lainnya. 
+Tujuan utama dari STP adalah mengolah air limbah atau air 
+kotor agar dapat digunakan kembali dengan aman atau 
+dibuang tanpa mencemari lingkungan.
+
+
+Elektrikal pada gedung merupakan salah satu 
+komponen vital yang menunjang keberlangsungan operasional 
+sehari-hari dalam suatu bangunan, baik itu gedung 
+perkantoran, pusat perbelanjaan, apartemen, maupun fasilitas industri. 
+Keberadaan sistem ini tidak hanya sebatas 
+menyediakan tenaga listrik, tetapi juga mencakup pengaturan 
+distribusi listrik, sistem pencahayaan, kelistrikan darurat, 
+sistem proteksi petir, sistem pentanahan (grounding), hingga 
+sistem kelistrikan untuk keselamatan seperti fire alarm dan 
+smoke detector.
+
+
+
+Fire alarm merupakan perangkat yang berfungsi sebagai 
+penanda bahaya dengan mendeteksi adanya api atau asap 
+yang tidak diinginkan secara sistematis. Sistem ini bekerja 
+dengan memonitor perubahan lingkungan yang menunjukkan 
+indikasi kebakaran. Jika terdapat potensi bahaya, detektor 
+akan mengirimkan sinyal berupa suara keras serta lampu 
+berkedip terang sebagai peringatan. 
+
+
+
+Tata suara merupakan metode pengelolaan perangkat 
+audio dalam berbagai jenis acara, seperti pertunjukan, 
+pertemuan, dan rekaman. Proses ini mencakup penyesuaian 
+volume suara agar tetap terdengar jelas tanpa mengurangi 
+kualitas bunyi yang diperkuat.
+
+

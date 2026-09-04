@@ -9,7 +9,7 @@
         <pattern>HALO</pattern>
 
         <template>
-            Halo! 👋 Saya ArchMate, AI Architecture Assistant.
+            Halo! 👋 Saya CheryChatboat🍒, AI Architecture Assistant.
             Apa yang ingin kamu pelajari tentang arsitektur?
         </template>
 
@@ -21,7 +21,7 @@
         <pattern>HAI</pattern>
 
         <template>
-            Hai! 🏛️ Saya ArchMate.
+            Hai! Saya CheryChatboat🍒.
             Saya siap membantu kamu mempelajari arsitektur.
         </template>
 
@@ -35,7 +35,7 @@
         <pattern>SIAPA KAMU</pattern>
 
         <template>
-            Saya ArchMate, chatbot yang membantu pengguna
+            Saya CheryChatboat🍒, chatbot yang membantu pengguna
             mempelajari dunia arsitektur.
         </template>
 
@@ -69,6 +69,120 @@
 
     </category>
 
+     <category>
+
+        <pattern>MATERIAL APA YANG COCOK DIGUNAKAN PADA BANGUNAN DI DAERAH TROPIS</pattern>
+
+        <template>
+           Material yang cocok adalah kayu, batu alam, bata, beton, kaca dengan pelindung panas,
+           dan material atap yang memiliki insulasi, karena sesuai dengan kondisi panas dan lembap di daerah tropis. 
+        </template>
+
+    </category>
+
+    <category>
+
+        <pattern>APA MATERIAL YANG COCOK UNTUK MENGURANGI PANAS PADA BANGUNAN</pattern>
+
+        <template>
+           Material seperti insulasi atap, kaca low-E atau kaca berlapis, bata, kayu, dan atap berwarna 
+           terang dapat membantu mengurangi panas yang masuk ke dalam bangunan.
+        </template>
+
+    </category>
+
+    <category>
+
+        <pattern>APA FUNGSI VEGETASI DI SEKITAR BANGUNAN</pattern>
+
+        <template>
+          Vegetasi berfungsi sebagai peneduh, mengurangi panas matahari, menyaring debu, menghasilkan oksigen, 
+          mengurangi silau, dan menciptakan lingkungan yang lebih sejuk dan nyaman.
+        </template>
+
+    </category>
+
+    <category>
+
+        <pattern>MENGAPA ARSITEK HARUS MEMPERHATIKAN LINGKUNGAN SEKITAR</pattern>
+
+        <template>
+          Karena kondisi lingkungan seperti arah matahari, angin, curah hujan, vegetasi, topografi, dan bangunan sekitar memengaruhi
+          desain agar bangunan lebih nyaman, sesuai lokasi, dan hemat energi.
+        </template>
+
+    </category>
+
+
+    <category>
+
+        <pattern>MENGAPA ARAH ANGIN PERLU DIPERHATIKAN</pattern>
+
+        <template>
+          Arah angin perlu diperhatikan untuk menentukan posisi bukaan seperti jendela
+          dan ventilasi, sehingga udara dapat mengalir dengan baik dan menciptakan ventilasi alami di dalam bangunan.
+        </template>
+
+    </category>
+
+        <category>
+
+        <pattern>MENGAPA BANGUNAN PERLU MENYESUAIKAN DENGAN IKLIM</pattern>
+
+        <template>
+          Agar bangunan dapat memberikan kenyamanan bagi pengguna, mengurangi panas dan kelembapan, 
+          melindungi dari hujan, serta mengurangi penggunaan energi seperti AC dan pencahayaan buatan.
+        </template>
+
+    </category>
+
+        <category>
+
+        <pattern>MENGAPA BANGUNAN TROPIS MEMBUTUHKAN VENTILASI YANG BAIK</pattern>
+
+        <template>
+          Karena daerah tropis memiliki suhu dan kelembapan yang tinggi. Ventilasi yang baik membantu mengalirkan udara, 
+          mengeluarkan udara panas, mengurangi kelembapan, dan membuat ruangan lebih nyaman.
+        </template>
+
+    </category>
+
+
+    <category>
+
+        <pattern>APA YANG DIMAKSUD DENGAN FASAD BANGUNAN</pattern>
+
+        <template>
+          Fasad adalah bagian tampak luar atau wajah bangunan, terutama bagian depan, yang memberikan karakter visual sekaligus dapat berfungsi sebagai
+          pelindung bangunan dari panas matahari dan hujan.
+        </template>
+
+    </category>
+
+
+    <category>
+
+        <pattern>BAGAIMANA CARA BANGUNAN INI MENDAPATKAN PENCAHAYAAN ALAMI</pattern>
+
+        <template>
+          Bangunan mendapatkan pencahayaan alami melalui jendela, bukaan, kaca, skylight, void, atau ruang terbuka yang memungkinkan cahaya matahari masuk ke dalam ruangan tanpa terlalu
+          banyak menggunakan lampu pada siang hari.
+        </template>
+
+    </category>
+
+    <category>
+
+        <pattern>BAGAIMANA SIRKULASI PENGGUNA DI DALAM BANGUNAN INI</pattern>
+
+        <template>
+          Sirkulasi pengguna dirancang melalui jalur masuk, koridor, tangga atau ramp, dan jalur menuju setiap ruang. Penataannya dibuat jelas dan terarah agar pengguna dapat bergerak dengan
+           mudah, nyaman, dan tidak saling mengganggu.
+        </template>
+
+    </category>
+
+
 
     <!-- GOODBYE -->
 
@@ -77,7 +191,7 @@
         <pattern>TERIMA KASIH</pattern>
 
         <template>
-            Sama-sama! 🏛️ Senang bisa membantu.
+            Sama-sama! 🍒 Senang bisa membantu.
         </template>
 
     </category>
