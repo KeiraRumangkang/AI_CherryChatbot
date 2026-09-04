@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CherryChatbot</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+
+            <div class="brand">
+
+                <div class="cherry-logo">
+                    <span>🍒</span>
+                </div>
+
+                <div class="brand-text">
+                    <h2>CherryChatbot</h2>
+                    <p>Architecture Assistant</p>
+                </div>
+
+            </div>
+
+
+            <!-- NEW CHAT -->
+
+            <button class="new-chat" id="newChat">
+
+                <span class="plus">＋</span>
+
+                <span>New Conversation</span>
+
+            </button>
+
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+                <div class="menu-title">
+                    EXPLORE
+                </div>
+
+
+                <a href="#" class="menu-item active">
+
+                    <span class="menu-icon">⌂</span>
+
+                    <span>Home</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">🏛</span>
+
+                    <span>Architecture</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">◈</span>
+
+                    <span>Styles</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">▤</span>
+
+                    <span>Library</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">✦</span>
+
+                    <span>Quiz</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- BOTTOM SIDEBAR -->
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">⚙</span>
+
+                    <span>Settings</span>
+
+                </a>
+
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        K
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>Student</strong>
+
+                        <small>Architecture Learner</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main">
+
+
+            <!-- HEADER -->
+
+            <header class="header">
+
+                <div class="header-left">
+
+                    <div class="mobile-logo">
+                        🍒
+                    </div>
+
+                    <div>
+
+                        <h3>CherryChatbot</h3>
+
+                        <div class="status">
+
+                            <span class="status-dot"></span>
+
+                            AI Architecture Assistant
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button class="header-button">
+
+                    ⋮
+
+                </button>
+
+            </header>
+
+
+
+            <!-- ================= CHAT AREA ================= -->
+
+            <section class="chat-area">
+
+
+                <!-- WELCOME -->
+
+                <div class="welcome" id="welcome">
+
+                    <div class="welcome-logo">
+
+                        <div class="cherry-big">
+                            🍒
+                        </div>
+
+                    </div>
+
+
+                    <div class="welcome-badge">
+
+                        <span></span>
+
+                        YOUR ARCHITECTURE COMPANION
+
+                    </div>
+
+
+                    <h1>
+
+                        Hello, I'm
+
+                        <span>CherryChatbot</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Explore architecture, design principles,
+                        architectural styles, and materials
+                        through an intelligent conversation.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- QUICK QUESTIONS -->
+
+                <div class="quick-section">
+
+                    <div class="section-heading">
+
+                        <span>START EXPLORING</span>
+
+                        <div class="heading-line"></div>
+
+                    </div>
+
+
+                    <div class="quick-grid">
+
+
+                        <!-- CARD 1 -->
+
+                        <button class="quick-card">
+
+                            <div class="card-icon pink">
+                                🏛
+                            </div>
+
+                            <div class="card-content">
+
+                                <strong>
+                                    Modern Architecture
+                                </strong>
+
+                                <small>
+                                    Learn about modern architectural principles
+                                </small>
+
+                            </div>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- CARD 2 -->
+
+                        <button class="quick-card">
+
+                            <div class="card-icon green">
+                                ◼
+                            </div>
+
+                            <div class="card-content">
+
+                                <strong>
+                                    Brutalist Architecture
+                                </strong>
+
+                                <small>
+                                    Explore concrete, form and structure
+                                </small>
+
+                            </div>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- CARD 3 -->
+
+                        <button class="quick-card">
+
+                            <div class="card-icon green">
+                                ☀
+                            </div>
+
+                            <div class="card-content">
+
+                                <strong>
+                                    Tropical Architecture
+                                </strong>
+
+                                <small>
+                                    Discover climate-responsive design
+                                </small>
+
+                            </div>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- CARD 4 -->
+
+                        <button class="quick-card">
+
+                            <div class="card-icon pink">
+                                📐
+                            </div>
+
+                            <div class="card-content">
+
+                                <strong>
+                                    Architecture Principles
+                                </strong>
+
+                                <small>
+                                    Understand what makes a good building
+                                </small>
+
+                            </div>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MESSAGES -->
+
+                <div
+                    class="messages"
+                    id="messages">
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= INPUT ================= -->
+
+            <div class="input-container">
+
+
+                <div class="input-box">
+
+                    <div class="input-decoration">
+                        🍒
+                    </div>
+
+
+                    <textarea
+                        id="userInput"
+                        placeholder="Ask CherryChatbot about architecture..."
+                        rows="1">
+                    </textarea>
+
+
+                    <button
+                        id="sendButton"
+                        class="send-button">
+
+                        ↑
+
+                    </button>
+
+                </div>
+
+
+                <div class="input-footer">
+
+                    <span>
+                        CherryChatbot
+                    </span>
+
+                    <span>
+                        Powered by AIML + RAG
+                    </span>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

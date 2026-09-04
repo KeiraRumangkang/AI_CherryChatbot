@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="2.0">
+
+    <!-- GREETING -->
+
+    <category>
+
+        <pattern>HALO</pattern>
+
+        <template>
+            Halo! 👋 Saya ArchMate, AI Architecture Assistant.
+            Apa yang ingin kamu pelajari tentang arsitektur?
+        </template>
+
+    </category>
+
+
+    <category>
+
+        <pattern>HAI</pattern>
+
+        <template>
+            Hai! 🏛️ Saya ArchMate.
+            Saya siap membantu kamu mempelajari arsitektur.
+        </template>
+
+    </category>
+
+
+    <!-- IDENTITY -->
+
+    <category>
+
+        <pattern>SIAPA KAMU</pattern>
+
+        <template>
+            Saya ArchMate, chatbot yang membantu pengguna
+            mempelajari dunia arsitektur.
+        </template>
+
+    </category>
+
+
+    <!-- BASIC ARCHITECTURE -->
+
+    <category>
+
+        <pattern>APA ITU ARSITEKTUR</pattern>
+
+        <template>
+            Arsitektur adalah seni dan ilmu dalam merancang
+            bangunan dan ruang dengan mempertimbangkan fungsi,
+            keamanan, kenyamanan, dan estetika.
+        </template>
+
+    </category>
+
+
+    <category>
+
+        <pattern>APA ITU ARSITEK</pattern>
+
+        <template>
+            Arsitek adalah seorang profesional yang merancang
+            bangunan dan ruang dengan mempertimbangkan fungsi,
+            estetika, keamanan, dan lingkungan.
+        </template>
+
+    </category>
+
+
+    <!-- GOODBYE -->
+
+    <category>
+
+        <pattern>TERIMA KASIH</pattern>
+
+        <template>
+            Sama-sama! 🏛️ Senang bisa membantu.
+        </template>
+
+    </category>
+
+
+    <category>
+
+        <pattern>SELAMAT TINGGAL</pattern>
+
+        <template>
+            Sampai jumpa! 👋
+        </template>
+
+    </category>
+
+
+</aiml>
