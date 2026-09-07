@@ -2,117 +2,113 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>CherryChatbot</title>
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet"
+        href="/style.css">
+
 </head>
+
 
 <body>
 
     <div class="app">
 
+
         <!-- ================= SIDEBAR ================= -->
 
         <aside class="sidebar">
+
 
             <!-- LOGO -->
 
             <div class="brand">
 
                 <div class="cherry-logo">
+
                     <span>🍒</span>
+
                 </div>
 
+
                 <div class="brand-text">
-                    <h2>CherryChatbot</h2>
-                    <p>Architecture Assistant</p>
+
+                    <h2>
+                        CherryChatbot
+                    </h2>
+
+                    <p>
+                        Architecture Assistant
+                    </p>
+
                 </div>
 
             </div>
 
 
+
             <!-- NEW CHAT -->
 
-            <button class="new-chat" id="newChat">
+            <button
+                class="new-chat"
+                id="newChat">
 
-                <span class="plus">＋</span>
+                <span class="plus">
+                    ＋
+                </span>
 
-                <span>New Conversation</span>
+                <span>
+                    New Conversation
+                </span>
 
             </button>
 
 
-            <!-- MENU -->
+
+            <!-- ================= RECENT QUESTIONS ================= -->
 
             <nav class="menu">
 
+
                 <div class="menu-title">
-                    EXPLORE
+                    RECENT QUESTIONS
                 </div>
 
 
-                <a href="#" class="menu-item active">
+                <!--
+                    Pertanyaan yang sudah ditanyakan
+                    akan dimasukkan oleh JavaScript
+                -->
 
-                    <span class="menu-icon">⌂</span>
+                <div
+                    class="recent-questions"
+                    id="recentQuestions">
 
-                    <span>Home</span>
+                    <div class="empty-history">
 
-                </a>
+                        Belum ada pertanyaan.
 
+                    </div>
 
-                <a href="#" class="menu-item">
+                </div>
 
-                    <span class="menu-icon">🏛</span>
-
-                    <span>Architecture</span>
-
-                </a>
-
-
-                <a href="#" class="menu-item">
-
-                    <span class="menu-icon">◈</span>
-
-                    <span>Styles</span>
-
-                </a>
-
-
-                <a href="#" class="menu-item">
-
-                    <span class="menu-icon">▤</span>
-
-                    <span>Library</span>
-
-                </a>
-
-
-                <a href="#" class="menu-item">
-
-                    <span class="menu-icon">✦</span>
-
-                    <span>Quiz</span>
-
-                </a>
 
             </nav>
 
 
-            <!-- BOTTOM SIDEBAR -->
+
+            <!-- ================= BOTTOM SIDEBAR ================= -->
 
             <div class="sidebar-bottom">
 
-                <a href="#" class="menu-item">
 
-                    <span class="menu-icon">⚙</span>
-
-                    <span>Settings</span>
-
-                </a>
-
+                <!-- PROFILE -->
 
                 <div class="profile">
 
@@ -120,17 +116,23 @@
                         K
                     </div>
 
+
                     <div class="profile-info">
 
-                        <strong>Student</strong>
+                        <strong>
+                            Student
+                        </strong>
 
-                        <small>Architecture Learner</small>
+                        <small>
+                            Architecture Learner
+                        </small>
 
                     </div>
 
                 </div>
 
             </div>
+
 
         </aside>
 
@@ -141,19 +143,25 @@
         <main class="main">
 
 
-            <!-- HEADER -->
+            <!-- ================= HEADER ================= -->
 
             <header class="header">
 
+
                 <div class="header-left">
+
 
                     <div class="mobile-logo">
                         🍒
                     </div>
 
+
                     <div>
 
-                        <h3>CherryChatbot</h3>
+                        <h3>
+                            CherryChatbot
+                        </h3>
+
 
                         <div class="status">
 
@@ -168,11 +176,13 @@
                 </div>
 
 
+
                 <button class="header-button">
 
                     ⋮
 
                 </button>
+
 
             </header>
 
@@ -183,9 +193,12 @@
             <section class="chat-area">
 
 
-                <!-- WELCOME -->
+                <!-- ================= WELCOME ================= -->
 
-                <div class="welcome" id="welcome">
+                <div
+                    class="welcome"
+                    id="welcome">
+
 
                     <div class="welcome-logo">
 
@@ -194,6 +207,7 @@
                         </div>
 
                     </div>
+
 
 
                     <div class="welcome-badge">
@@ -205,13 +219,17 @@
                     </div>
 
 
+
                     <h1>
 
                         Hello, I'm
 
-                        <span>CherryChatbot</span>
+                        <span>
+                            CherryChatbot
+                        </span>
 
                     </h1>
+
 
 
                     <p>
@@ -222,21 +240,26 @@
 
                     </p>
 
+
                 </div>
 
 
 
-                <!-- QUICK QUESTIONS -->
+                <!-- ================= QUICK QUESTIONS ================= -->
 
                 <div class="quick-section">
 
+
                     <div class="section-heading">
 
-                        <span>START EXPLORING</span>
+                        <span>
+                            START EXPLORING
+                        </span>
 
                         <div class="heading-line"></div>
 
                     </div>
+
 
 
                     <div class="quick-grid">
@@ -246,9 +269,11 @@
 
                         <button class="quick-card">
 
+
                             <div class="card-icon pink">
                                 🏛
                             </div>
+
 
                             <div class="card-content">
 
@@ -262,9 +287,11 @@
 
                             </div>
 
+
                             <span class="arrow">
                                 →
                             </span>
+
 
                         </button>
 
@@ -274,9 +301,11 @@
 
                         <button class="quick-card">
 
+
                             <div class="card-icon green">
                                 ◼
                             </div>
+
 
                             <div class="card-content">
 
@@ -290,9 +319,11 @@
 
                             </div>
 
+
                             <span class="arrow">
                                 →
                             </span>
+
 
                         </button>
 
@@ -302,9 +333,11 @@
 
                         <button class="quick-card">
 
+
                             <div class="card-icon green">
                                 ☀
                             </div>
+
 
                             <div class="card-content">
 
@@ -318,9 +351,11 @@
 
                             </div>
 
+
                             <span class="arrow">
                                 →
                             </span>
+
 
                         </button>
 
@@ -330,9 +365,11 @@
 
                         <button class="quick-card">
 
+
                             <div class="card-icon pink">
                                 📐
                             </div>
+
 
                             <div class="card-content">
 
@@ -346,11 +383,14 @@
 
                             </div>
 
+
                             <span class="arrow">
                                 →
                             </span>
 
+
                         </button>
+
 
                     </div>
 
@@ -358,11 +398,12 @@
 
 
 
-                <!-- MESSAGES -->
+                <!-- ================= MESSAGES ================= -->
 
                 <div
                     class="messages"
                     id="messages">
+
                 </div>
 
 
@@ -377,9 +418,11 @@
 
                 <div class="input-box">
 
+
                     <div class="input-decoration">
                         🍒
                     </div>
+
 
 
                     <textarea
@@ -387,6 +430,7 @@
                         placeholder="Ask CherryChatbot about architecture..."
                         rows="1">
                     </textarea>
+
 
 
                     <button
@@ -397,26 +441,35 @@
 
                     </button>
 
+
                 </div>
 
 
+
                 <div class="input-footer">
+
 
                     <span>
                         CherryChatbot
                     </span>
 
+
                     <span>
                         Powered by AIML + RAG
                     </span>
 
+
                 </div>
+
 
             </div>
 
+
         </main>
 
+
     </div>
+
 
 
     <script src="/script.js"></script>

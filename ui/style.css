@@ -260,7 +260,7 @@ body {
 
 
 /* =========================================================
-   MENU
+   RECENT QUESTIONS
 ========================================================= */
 
 .menu {
@@ -269,7 +269,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    gap: 5px;
+    min-height: 0;
 
     position: relative;
 
@@ -277,15 +277,19 @@ body {
 }
 
 
+/* ================================
+   TITLE
+================================ */
+
 .menu-title {
     margin:
         0
         10px
-        9px;
-
-    font-size: 9px;
+        12px;
 
     color: #9d7b86;
+
+    font-size: 9px;
 
     letter-spacing: 1.8px;
 
@@ -293,53 +297,205 @@ body {
 }
 
 
-/* Menu item */
+/* ================================
+   RECENT QUESTIONS CONTAINER
+================================ */
 
-.menu-item {
-    height: 43px;
-
-    padding: 0 12px;
+.recent-questions {
 
     display: flex;
-    align-items: center;
 
-    gap: 12px;
+    flex-direction: column;
 
-    border-radius: 9px;
+    gap: 5px;
 
-    color: #75666c;
+    overflow-y: auto;
 
-    text-decoration: none;
+    max-height: 100%;
 
-    font-size: 12px;
-
-    transition: all 0.2s ease;
+    padding-right: 3px;
 }
 
 
-.menu-icon {
-    width: 20px;
+/* ================================
+   SCROLLBAR HISTORY
+================================ */
+
+.recent-questions::-webkit-scrollbar {
+
+    width: 4px;
+
+}
+
+
+.recent-questions::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+.recent-questions::-webkit-scrollbar-thumb {
+
+    background: #e5bcc8;
+
+    border-radius: 10px;
+
+}
+
+
+/* ================================
+   EMPTY HISTORY
+================================ */
+
+.empty-history {
+
+    padding:
+        12px
+        10px;
+
+    color: #a28f96;
+
+    font-size: 10px;
+
+    line-height: 1.5;
 
     text-align: center;
 
-    font-size: 16px;
+    border-radius: 9px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        );
+
 }
 
 
-/* Hover */
+/* ================================
+   HISTORY ITEM
+================================ */
 
-.menu-item:hover {
-    background: rgba(255, 255, 255, 0.60);
+.history-item {
+
+    width: 100%;
+
+    padding:
+        10px
+        11px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.28
+        );
+
+    color: #75666c;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        all
+        0.2s
+        ease;
+
+}
+
+
+/* ================================
+   HISTORY ICON
+================================ */
+
+.history-icon {
+
+    flex-shrink: 0;
+
+    width: 18px;
+
+    text-align: center;
+
+    color: #a43652;
+
+    font-size: 12px;
+
+}
+
+
+/* ================================
+   HISTORY TEXT
+================================ */
+
+.history-text {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+}
+
+
+/* ================================
+   HISTORY HOVER
+================================ */
+
+.history-item:hover {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
 
     color: #7e3048;
 
-    transform: translateX(2px);
+    transform:
+        translateX(2px);
+
 }
 
 
-/* Active menu */
+/* ================================
+   HISTORY ACTIVE
+================================ */
 
-.menu-item.active {
+.history-item.active {
+
     background:
         linear-gradient(
             90deg,
@@ -352,9 +508,15 @@ body {
     font-weight: 600;
 
     box-shadow:
-        0 5px 12px rgba(144, 52, 78, 0.08);
-}
+        0 5px 12px
+        rgba(
+            144,
+            52,
+            78,
+            0.08
+        );
 
+}
 
 /* =========================================================
    SIDEBAR BOTTOM

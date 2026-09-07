@@ -37,6 +37,15 @@ def javascript():
 
 
 # ==========================================
+# FILE GAMBAR
+# ==========================================
+
+@app.route("/images/<filename>")
+def images(filename):
+    return send_from_directory("images", filename)
+
+
+# ==========================================
 # CHAT API
 # ==========================================
 

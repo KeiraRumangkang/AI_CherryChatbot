@@ -27,17 +27,15 @@ hangat pada bangunan.
 Kayu dapat digunakan sebagai struktur, lantai, dinding, plafon,
 dan elemen dekoratif.
 
-lnventarisasi adalah kegiatan mengumpulkan data terkait tapak (data kondisi
+Inventarisasi adalah kegiatan mengumpulkan data terkait tapak (data kondisi
 eksisting/kondisi saat ini) yang akan direncanakan/didesain. Data data tersebut
 dapat diperoleh secara langsung (data primer) atau tidak langsung (data sekunder).
-
 
 Jenis-jenis data yang dikumpulkan dari Inventarisasi
 a. Batas Tapak
 b. Biofisik & Sosial Budaya
 c. Tautan Lingkungan
 d. Sirkulasi
-e. Aksesibilitas
 e. Aksesibilitas
 f. Hidrologi
 g. Topografi

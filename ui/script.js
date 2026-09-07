@@ -6,6 +6,142 @@ const newChat = document.getElementById("newChat");
 
 
 // ==========================================
+// RECENT QUESTIONS
+// ==========================================
+
+const recentQuestions =
+    document.getElementById("recentQuestions");
+
+
+// Menyimpan daftar pertanyaan
+let questionHistory = [];
+
+
+// ==========================================
+// ADD QUESTION TO HISTORY
+// ==========================================
+
+function addToHistory(question) {
+
+    // Jangan masukkan pertanyaan yang sama
+    if (questionHistory.includes(question)) {
+        return;
+    }
+
+
+    // Masukkan pertanyaan terbaru ke awal
+    questionHistory.unshift(question);
+
+
+    // Batasi maksimal 8 pertanyaan
+    if (questionHistory.length > 8) {
+        questionHistory.pop();
+    }
+
+
+    renderHistory();
+}
+
+
+// ==========================================
+// DISPLAY HISTORY
+// ==========================================
+
+function renderHistory() {
+
+    // Bersihkan isi history
+    recentQuestions.innerHTML = "";
+
+
+    // Jika belum ada pertanyaan
+    if (questionHistory.length === 0) {
+
+        const empty =
+            document.createElement("div");
+
+        empty.classList.add(
+            "empty-history"
+        );
+
+        empty.textContent =
+            "Belum ada pertanyaan.";
+
+        recentQuestions.appendChild(
+            empty
+        );
+
+        return;
+    }
+
+
+    // Tampilkan setiap pertanyaan
+    questionHistory.forEach(
+        function(question) {
+
+            const item =
+                document.createElement("button");
+
+            item.classList.add(
+                "history-item"
+            );
+
+
+            // Icon
+            const icon =
+                document.createElement("span");
+
+            icon.classList.add(
+                "history-icon"
+            );
+
+            icon.textContent = "◈";
+
+
+            // Text
+            const text =
+                document.createElement("span");
+
+            text.classList.add(
+                "history-text"
+            );
+
+            text.textContent =
+                question;
+
+
+            // Masukkan icon dan text
+            item.appendChild(icon);
+
+            item.appendChild(text);
+
+
+            // ==================================
+            // KETIKA HISTORY DIKLIK
+            // ==================================
+
+            item.addEventListener(
+                "click",
+                function() {
+
+                    input.value =
+                        question;
+
+                    input.focus();
+
+                }
+            );
+
+
+            recentQuestions.appendChild(
+                item
+            );
+
+        }
+    );
+}
+
+
+// ==========================================
 // SEND MESSAGE
 // ==========================================
 
@@ -17,16 +153,42 @@ async function sendMessage() {
         return;
     }
 
-    // Sembunyikan welcome
+
+    // ======================================
+    // TAMBAHKAN KE HISTORY
+    // ======================================
+
+    addToHistory(text);
+
+
+    // ======================================
+    // SEMBUNYIKAN WELCOME
+    // ======================================
+
     welcome.style.display = "none";
 
-    // Tampilkan pesan user
-    addMessage(text, "user");
 
-    // Bersihkan input
+    // ======================================
+    // TAMPILKAN PESAN USER
+    // ======================================
+
+    addMessage(
+        text,
+        "user"
+    );
+
+
+    // ======================================
+    // BERSIHKAN INPUT
+    // ======================================
+
     input.value = "";
 
-    // Tampilkan loading
+
+    // ======================================
+    // TAMPILKAN LOADING
+    // ======================================
+
     const loadingMessage = addMessage(
         "CherryChatbot sedang berpikir... 🍒",
         "ai"
@@ -35,40 +197,63 @@ async function sendMessage() {
 
     try {
 
-        // Kirim pertanyaan ke Python
-        const response = await fetch("/chat", {
+        // ==================================
+        // KIRIM PERTANYAAN KE PYTHON
+        // ==================================
 
-            method: "POST",
+        const response = await fetch(
+            "/chat",
+            {
+                method: "POST",
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
-            body: JSON.stringify({
-                message: text
-            })
+                body: JSON.stringify({
+                    message: text
+                })
+            }
+        );
 
-        });
 
+        // ==================================
+        // CEK RESPONSE SERVER
+        // ==================================
 
         if (!response.ok) {
-            throw new Error("Server error");
+
+            throw new Error(
+                "Server error"
+            );
+
         }
 
 
-        // Ambil jawaban Python
-        const data = await response.json();
+        // ==================================
+        // AMBIL DATA DARI PYTHON
+        // ==================================
+
+        const data =
+            await response.json();
 
 
-        // Hapus loading
+        // ==================================
+        // HAPUS LOADING
+        // ==================================
+
         loadingMessage.remove();
 
 
-        // Tampilkan jawaban
+        // ==================================
+        // TAMPILKAN JAWABAN
+        // ==================================
+
         addMessage(
             data.response,
             "ai",
-            data.source
+            data.source,
+            data.image
         );
 
 
@@ -76,7 +261,17 @@ async function sendMessage() {
 
         console.error(error);
 
+
+        // ==================================
+        // HAPUS LOADING
+        // ==================================
+
         loadingMessage.remove();
+
+
+        // ==================================
+        // TAMPILKAN ERROR
+        // ==================================
 
         addMessage(
             "Maaf, CherryChatbot tidak dapat terhubung ke Python. Pastikan server sedang berjalan. 🍒",
@@ -95,8 +290,13 @@ async function sendMessage() {
 function addMessage(
     text,
     sender,
-    source = ""
+    source = "",
+    image = null
 ) {
+
+    // ======================================
+    // CONTAINER MESSAGE
+    // ======================================
 
     const message =
         document.createElement("div");
@@ -107,6 +307,10 @@ function addMessage(
     );
 
 
+    // ======================================
+    // CONTENT
+    // ======================================
+
     const content =
         document.createElement("div");
 
@@ -115,10 +319,74 @@ function addMessage(
     );
 
 
-    content.textContent = text;
+    // ======================================
+    // TEXT
+    // ======================================
+
+    const textElement =
+        document.createElement("div");
+
+    textElement.textContent = text;
 
 
-    // Source AIML / RAG
+    content.appendChild(
+        textElement
+    );
+
+
+    // ======================================
+    // GAMBAR
+    // ======================================
+
+    if (image) {
+
+        const imageContainer =
+            document.createElement("div");
+
+        imageContainer.classList.add(
+            "chat-image-container"
+        );
+
+
+        const imageElement =
+            document.createElement("img");
+
+        imageElement.src = image;
+
+        imageElement.alt =
+            "Gambar arsitektur";
+
+
+        imageElement.classList.add(
+            "chat-image"
+        );
+
+
+        // Jika gambar gagal dimuat
+
+        imageElement.onerror =
+            function() {
+
+                imageContainer.remove();
+
+            };
+
+
+        imageContainer.appendChild(
+            imageElement
+        );
+
+        content.appendChild(
+            imageContainer
+        );
+
+    }
+
+
+    // ======================================
+    // SOURCE AIML / RAG
+    // ======================================
+
     if (source) {
 
         const sourceElement =
@@ -138,20 +406,34 @@ function addMessage(
     }
 
 
-    message.appendChild(content);
+    // ======================================
+    // MASUKKAN KE MESSAGE
+    // ======================================
 
-    messages.appendChild(message);
+    message.appendChild(
+        content
+    );
+
+    messages.appendChild(
+        message
+    );
 
 
-    // Scroll
-    setTimeout(() => {
+    // ======================================
+    // SCROLL KE PESAN TERBARU
+    // ======================================
 
-        message.scrollIntoView({
-            behavior: "smooth",
-            block: "end"
-        });
+    setTimeout(
+        function() {
 
-    }, 50);
+            message.scrollIntoView({
+                behavior: "smooth",
+                block: "end"
+            });
+
+        },
+        50
+    );
 
 
     return message;
@@ -201,25 +483,30 @@ const quickCards =
     );
 
 
-quickCards.forEach(function(card) {
+quickCards.forEach(
+    function(card) {
 
-    card.addEventListener(
-        "click",
-        function() {
+        card.addEventListener(
+            "click",
+            function() {
 
-            const question =
-                card.querySelector(
-                    "strong"
-                ).textContent;
+                const question =
+                    card.querySelector(
+                        "strong"
+                    ).textContent;
 
-            input.value = question;
 
-            input.focus();
+                input.value =
+                    question;
 
-        }
-    );
 
-});
+                input.focus();
+
+            }
+        );
+
+    }
+);
 
 
 // ==========================================
@@ -230,13 +517,36 @@ newChat.addEventListener(
     "click",
     function() {
 
+        // Hapus semua pesan
         messages.innerHTML = "";
 
-        welcome.style.display = "block";
 
+        // Tampilkan kembali welcome
+        welcome.style.display =
+            "block";
+
+
+        // Kosongkan input
         input.value = "";
 
+
+        // Hapus history
+        questionHistory = [];
+
+
+        // Tampilkan kondisi history kosong
+        renderHistory();
+
+
+        // Fokus input
         input.focus();
 
     }
 );
+
+
+// ==========================================
+// INITIAL HISTORY
+// ==========================================
+
+renderHistory();
